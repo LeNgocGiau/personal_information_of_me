@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- add icon  -->
+  <link rel="icon" href="assets/img/2.jpg" type="image/png" sizes="16x16" />
+  <!-- =====BOX ICONS===== -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <title>RichLee</title>
+</head>
+<style>
+  table {
+      table-layout: fixed;
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      font-size: 1.5vw;
+      border-collapse: separate;
+      border-spacing: 10px;
+  }
+
+  td {
+      width: 10%;
+      border: 4px solid rgba(255, 255, 255, 0.5);
+  }
+
+  button {
+      background: rgba(255, 255, 255, 0.5);
+      width: 90%;
+      height: 90%;
+      text-align: center;
+      padding: 5px;
+      font-size: 2.5vw;
+      outline: none;
+  }
+
+  .diphthong-cell {
+      background: rgba(0, 90, 255, 0.5);
+  }
+
+  .monophthong-cell {
+      background: rgba(255, 0, 0, 0.5);
+  }
+
+  .consonant-cell {
+      background: rgba(255, 255, 0, 0.5);
+  }
+</style>
+<body>
+  <!--===== HEADER =====-->
+  <header class="l-header">
+    <nav class="nav bd-grid">
+      <div>
+        <a href="" class="nav__logo">Rich Lee</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#project" class="nav__link">Project</a>
+          </li>
+          <li class="nav__item">
+            <a href="#achievement" class="nav__link">Achievement</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+          <li class="nav__item">
+            <!-- Theme change button -->
+            <a class="nav__link">
+              <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="bx bx-menu"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main class="l-main">
+    <!--===== HOME =====-->
+    <section class="home bd-grid" id="home">
+      <div class="home__data">
+        <div class="featured-name">
+          <h1 class="home__title">
+            Hi,<br />I am <span class="home__title-color"></span><br />
+            website Developer
+          </h1>
+          <!-- <p>I'm <span id="typedText"></span></p> -->
+      </div>
+
+        <a href="#contact" class="button" style="margin:  1rem 0; ">Contact</a>
+        <a href="assets/pdf/Le Ngoc Giau_Resume.pdf" class="button"
+          style="background-color: white; border-color: rgb(49, 112, 238) ; border-style: dashed;">
+          <p style="color: black;">Download CV</p>
+        </a>
+      </div>
+     
+
+      <div class="home__social">
+        <a href="https://www.linkedin.com/in/l%C3%AA-ng%E1%BB%8Dc-gi%C3%A0u-371024270/" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100072621973373" class="home__social-icon"><i class="bx bxl-facebook"></i></a>
+        <a href="https://github.com/LeNgocGiau" class="home__social-icon"><i class="bx bxl-github"></i></a>
+      </div>
+      <a href="#about" class="home__scroll">
+        <i class="bx bx-mouse home__scroll-icon"></i>
+        <span class="home__scroll-name">Scroll Down</span>
+      </a>
+      <div class="home__img">
+        <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <mask id="mask0" mask-type="alpha">
+            <path
+              d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+          </mask>
+          <g mask="url(#mask0)">
+            <path
+              d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+            <image class="home__blob-img" x="-50" y="-30" href="assets/img/1.jpg" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!--===== ABOUT =====-->
+    <section class="about section" id="about">
+      <h2 class="section-title">About</h2>
+
+      <div class="about__container bd-grid">
+        <div class="about__img">
+          <img src="assets/img/2.jpg" alt="" />
+        </div>
+
+        <div>
+          <h2 class="about__subtitle">I am Lê Ngọc Giàu</h2>
+          <p class="about__text">
+            As a third-year university student, I have experience with the <b>.NET
+              framework</b>, including <b>web API</b> development and <b>ASP.NET Core</b> 
+              and my favorite programming language is Kotlin. 
+              I have knowledge of object-oriented analysis and design, database design,
+               and other design patterns. My passion for learning new languages and technologies drives me towards <b>my dream of becoming a cross-platform web and mobile developer.</b>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--===== SKILLS =====-->
+    <section class="skills section" id="skills">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills__container bd-grid">
+        <div>
+          <h2 class="skills__subtitle">Technical Skills</h2>
+          <p class="skills__text">
+            I am skilled in the .NET framework, including web API development
+            and ASP.NET Core. I am also familiar with HTML, CSS, JavaScript,
+            and Bootstrap. I am learning flutter and java.
+          </p>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-microsoft skills__icon"></i>
+              <span class="skills__name">C#, Java, C, C++, Dart, Kotlin</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div></div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-microsoft skills__icon"></i>
+              <span class="skills__name">
+                .NET core, Web API, Entity Framework</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div></div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-microsoft skills__icon"></i>
+              <span class="skills__name">MySQL, SQL Server</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div></div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-microsoft skills__icon"></i>
+              <span class="skills__name">Git</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div></div>
+          </div>
+          <div class="skills__data">
+            <div class="skills__names">
+              <i class="bx bxl-microsoft skills__icon"></i>
+              <span class="skills__name">English B1 Certificate equivalent to TOEIC 450 points</span>
+            </div>
+            <div class="skills__bar skills__html"></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div>
+          <img src="assets/img/work3.jpg" alt="" class="skills__img" />
+        </div>
+      </div>
+    </section>
+
+    <!--===== WORK =====-->
+    <section class="work section" id="project">
+      <h2 class="section-title">Project</h2>
+      <div class="work__container bd-grid">
+        <a href="https://github.com/LeNgocGiau/NetFlixFilm" target="_blank" class="work__img" title="private project link update later">
+          <img src="assets/img/hdddbank.png" alt="" style="padding: 1rem;" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            NetFlix Chanels
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            The product is designed to recreate the Netflix platform website. <br>The website is mainly built on the interface, and the processing functions are in the stage of completing the source code
+            <br> The main languages ​​for this website are <b>HTML, CSS, JavaScripts</b>
+
+          </p>
+        </a>
+        <a href="https://github.com/LeNgocGiau/BakeryStore/tree/main/GiaDinhBakery" target="_blank" class="work__img" title="private project link update later">
+          <img src="assets/img/fakenews.png" alt="" style="height: 180px; margin: auto;" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            Bakery Store
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            The website is designed to have all the same functions as a normal sales website, the design purpose is aimed at users who know how to use it, is friendly, beautiful, aesthetic, bringing high economic results.
+            <br> The main languages ​​for this website are <b>HTML, CSS, JavaScripts</b>  
+            
+          </p>
+        </a>
+        <a href="https://github.com/LeNgocGiau/BinhDinhFood/tree/main" target="_blank" class="work__img">
+          <img src="assets/img/bdfood.png" alt="" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            BINH DINH FOOD
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            The e-commerce website sells specialty food which built by <b>.net core</b>. BD food has user web to order
+            food and admin web to manage all system. <b>The project got consolation prize of My first website competition
+            in Ho Chi Minh City University of Technology and Education (UTE)</b> 
+          </p>
+        </a>
+        <a href="https://github.com/LeNgocGiau/website_registerOnline_toBuy_movieTickets" target="_blank" class="work__img">
+          <img src="assets/img/twoone.png" alt="" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            TWOONE MOVIE
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            The movie website built by <b>asp.net MVC</b> also has web users to search, watch movies, ratting, ... and
+            web admin to manage the website. source pulled, cleaned from Kaggle and store in <b>sql server</b>
+          </p>
+        </a>
+        <a href="https://github.com/LeNgocGiau/E-commerce-Phone_sale" target="_blank" class="work__img">
+          <img src="assets/img/winform.png" alt="" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            HighTech Telecom
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            The product is recoded based on the appearance of the <b>TOP ZONE store website</b>.The website will provide information to customers about phones, laptops, iPads,... like an e-commerce website. 
+           
+           <br> The main languages ​​for this website are <b>HTML, CSS, JavaScripts</b>   
+          </p>
+        </a>
+        <!-- <a href="https://github.com/nhonvo/PredictsStockPricesLSTM-algorithm" target="_blank" class="work__img">
+          <img src="assets/img/lstm.png" alt="" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            PREDICT STOCK PRICE USE LSTM ALGORITHM
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            the project of Artificial intelligent, predict stock price base on history price 10 year ago and implement
+            <b>LSTM algorithm</b>. Project pass qualifying round of HUTECH - IT got talent
+          </p>
+        </a> -->
+
+        <a href="https://github.com/LeNgocGiau/drink_coffee" target="_blank" class="work__img">
+          <img src="assets/img/drinkCoffee.png" alt="" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            KaTiNat Coffee House
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            The product is reproduced according to the Katinat coffee website. The goal is to create a beautiful interface that 
+            impresses users, is friendly and easy to use.
+            <br>
+            The main languages ​​for this website are <b>HTML, CSS, JavaScripts</b> 
+          </p>
+        </a>
+
+        <!-- <a href="https://github.com/BTH-IT/MHPL_Project_1" target="_blank" class="work__img">
+          <img src="assets/img/game.png" alt="" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            course management
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            the project of Artificial intelligent, predict stock price base on history price 10 year ago and implement
+            <b>LSTM algorithm</b>. Project pass qualifying round of HUTECH - IT got talent
+          </p>
+        </a>
+
+        <a href="https://github.com/nhonvo/PredictsStockPricesLSTM-algorithm" target="_blank" class="work__img">
+          <img src="assets/img/gamePython.png" alt="" />
+          <h2 class="about__subtitle" style="color: rgb(49, 112, 238); padding: 1rem">
+            Magena Treasure hunter
+          </h2>
+          <p class="about__text" style="color: black; padding: 0 0 0.5rem 0.5rem">
+            the project of Artificial intelligent, predict stock price base on history price 10 year ago and implement
+            <b>LSTM algorithm</b>. Project pass qualifying round of HUTECH - IT got talent
+          </p>
+        </a> -->
+        
+    </section>
+
+
+    <!-- ===== Achivement =====-->
+    <section class="work section" id="achievement">
+      <h2 class="section-title">Learn English With Me</h2>
+      <table>
+        <tr id="row1">
+            <th id="column1"></th>
+            <th id="column2">monophthongs</th>
+            <th id="column3"></th>
+            <th id="column4"></th>
+            <th id="column5"></th>
+            <th id="column6">diphthongs</th>
+            <th id="column7"></th>
+            <th id="column8"></th>
+            <th id="column9"></th>
+        </tr>
+        <tr id="row2">
+            <td><strong>vowels</strong></td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlaySheep()">i:</button><br />sh<u><strong>ee</strong></u>p</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayShip()">ɪ</button><br />sh<u><strong>i</strong></u>p</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayGood()">ʊ</button><br />g<u><strong>oo</strong></u>d</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayShoot()">u:</button><br />sh<u><strong>oo</strong></u>t</td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayHere()">ɪə</button><br />h<u><strong>ere</strong></u></td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayWait()">eɪ</button><br />w<u><strong>ai</strong></u>t</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr id="row3">
+            <td></td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayBed()">e</button><br />b<u><strong>e</strong></u>d</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayTeacher()">ə</button><br />teach<u><strong>e</strong></u>r</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayBird()">ɜ:</button><br />b<u><strong>ir</strong></u>d</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayDoor()">ɔ:</button><br />d<u><strong>oo</strong></u>r</td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayTourist()">ʊə</button><br />t<u><strong>ou</strong></u>rist</td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayBoy()">ɔɪ</button><br />b<u><strong>oy</strong></u></td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayShow()">əʊ</button><br />sh<u><strong>ow</strong></u></td>
+            <td></td>
+        </tr>
+        <tr id="row4">
+            <td></td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayCat()">æ</button><br />c<u><strong>a</strong></u>t</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayUp()">ʌ</button><br /><u><strong>u</strong></u>p</td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayFar()">ɑ:</button><br />f<u><strong>ar</strong></u></td>
+            <td class="monophthong-cell"><button type="button"
+                    onclick="PlayOn()">ɒ</button><br /><u><strong>o</strong></u>n</td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayHair()">eə</button><br />h<u><strong>air</strong></u></td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayMy()">aɪ</button><br />m<u><strong>y</strong></u></td>
+            <td class="diphthong-cell"><button type="button"
+                    onclick="PlayCow()">aʊ</button><br />c<u><strong>ow</strong></u></td>
+            <td></td>
+        </tr>
+        <tr id="row5" class="consonant-cell">
+            <td><strong>consonants</strong></td>
+            <td><button type="button" onclick="PlayPea()">p</button><br /><u><strong>p</strong></u>ea</td>
+            <td><button type="button" onclick="PlayBoat()">b</button><br /><u><strong>b</strong></u>oat</td>
+            <td><button type="button" onclick="PlayTea()">t</button><br /><u><strong>t</strong></u>ea</td>
+            <td><button type="button" onclick="PlayDog()">d</button><br /><u><strong>d</strong></u>og</td>
+            <td><button type="button" onclick="PlayCheese()">tʃ</button><br /><u><strong>ch</strong></u>eese</td>
+            <td><button type="button" onclick="PlayJune()">dʒ</button><br /><u><strong>J</strong></u>une</td>
+            <td><button type="button" onclick="PlayCar()">k</button><br /><u><strong>c</strong></u>ar</td>
+            <td><button type="button" onclick="PlayGo()">g</button><br /><u><strong>g</strong></u>o</td>
+        </tr>
+        <tr id="row6" class="consonant-cell">
+            <td></td>
+            <td><button type="button" onclick="PlayFly()">f</button><br /><u><strong>f</strong></u>ly</td>
+            <td><button type="button" onclick="PlayVideo()">v</button><br /><u><strong>v</strong></u>ideo</td>
+            <td><button type="button" onclick="PlayThink()">θ</button><br /><u><strong>th</strong></u>ink</td>
+            <td><button type="button" onclick="PlayThisaud()">ð</button><br /><u><strong>th</strong></u>is</td>
+            <td><button type="button" onclick="PlaySee()">s</button><br /><u><strong>s</strong></u>ee</td>
+            <td><button type="button" onclick="PlayZoo()">z</button><br /><u><strong>z</strong></u>oo</td>
+            <td><button type="button" onclick="PlayShall()">ʃ</button><br /><u><strong>sh</strong></u>all</td>
+            <td><button type="button" onclick="PlayTelevision()">ʒ</button><br />televi<u><strong>s</strong></u>ion</td>
+        </tr>
+        <tr id="row7" class="consonant-cell">
+            <td></td>
+            <td><button type="button" onclick="PlayMan()">m</button><br /><u><strong>m</strong></u>an</td>
+            <td><button type="button" onclick="PlayNow()">n</button><br /><u><strong>n</strong></u>ow</td>
+            <td><button type="button" onclick="PlaySing()">ŋ</button><br />si<u><strong>ng</strong></u></td>
+            <td><button type="button" onclick="PlayHat()">h</button><br /><u><strong>h</strong></u>at</td>
+            <td><button type="button" onclick="PlayLove()">l</button><br /><u><strong>l</strong></u>ove</td>
+            <td><button type="button" onclick="PlayRed()">r</button><br /><u><strong>r</strong></u>ed</td>
+            <td><button type="button" onclick="PlayWet()">w</button><br /><u><strong>w</strong></u>et</td>
+            <td><button type="button" onclick="PlayYes()">j</button><br /><u><strong>y</strong></u>es</td>
+        </tr>
+    </table>
+
+    <script>
+        var sheep = new Audio();
+        sheep.src = "/audio/sheep.mp3";
+        function PlaySheep() {
+            sheep.play();
+        }
+
+        var ship = new Audio();
+        ship.src = "/audio/ship.mp3";
+        function PlayShip() {
+            ship.play();
+        }
+
+        var good = new Audio();
+        good.src = "/audio/good.mp3";
+        function PlayGood() {
+            good.play();
+        }
+
+        var shoot = new Audio();
+        shoot.src = "/audio/shoot.mp3";
+        function PlayShoot() {
+            shoot.play();
+        }
+
+        var bed = new Audio();
+        bed.src = "/audio/bed.mp3";
+        function PlayBed() {
+            bed.play();
+        }
+
+        var teacher = new Audio();
+        teacher.src = "/audio/teacher.mp3";
+        function PlayTeacher() {
+            teacher.play();
+        }
+
+        var bird = new Audio();
+        bird.src = "/audio/bird.mp3";
+        function PlayBird() {
+            bird.play();
+        }
+
+        var door = new Audio();
+        door.src = "/audio/door.mp3";
+        function PlayDoor() {
+            door.play();
+        }
+
+        var cat = new Audio();
+        cat.src = "/audio/cat.mp3";
+        function PlayCat() {
+            cat.play();
+        }
+
+        var up = new Audio();
+        up.src = "/audio/up.mp3";
+        function PlayUp() {
+            up.play();
+        }
+
+        var far = new Audio();
+        far.src = "/audio/far.mp3";
+        function PlayFar() {
+            far.play();
+        }
+
+        var on = new Audio();
+        on.src = "/audio/on.mp3";
+        function PlayOn() {
+            on.play();
+        }
+
+        var here = new Audio();
+        here.src = "/audio/here.mp3";
+        function PlayHere() {
+            here.play();
+        }
+
+        var wait = new Audio();
+        wait.src = "/audio/wait.mp3";
+        function PlayWait() {
+            wait.play();
+        }
+
+        var tourist = new Audio();
+        tourist.src = "/audio/tourist.mp3";
+        function PlayTourist() {
+            tourist.play();
+        }
+
+        var boy = new Audio();
+        boy.src = "/audio/boy.mp3";
+        function PlayBoy() {
+            boy.play();
+        }
+
+        var show = new Audio();
+        show.src = "/audio/show.mp3";
+        function PlayShow() {
+            show.play();
+        }
+
+        var hair = new Audio();
+        hair.src = "/audio/hair.mp3";
+        function PlayHair() {
+            hair.play();
+        }
+
+        var my = new Audio();
+        my.src = "/audio/my.mp3";
+        function PlayMy() {
+            my.play();
+        }
+
+        var cow = new Audio();
+        cow.src = "/audio/cow.mp3";
+        function PlayCow() {
+            cow.play();
+        }
+
+        var pea = new Audio();
+        pea.src = "/audio/pea.mp3";
+        function PlayPea() {
+            pea.play();
+        }
+
+        var boat = new Audio();
+        boat.src = "/audio/boat.mp3";
+        function PlayBoat() {
+            boat.play();
+        }
+
+        var tea = new Audio();
+        tea.src = "/audio/tea.mp3";
+        function PlayTea() {
+            tea.play();
+        }
+
+        var dog = new Audio();
+        dog.src = "/audio/dog.mp3";
+        function PlayDog() {
+            dog.play();
+        }
+
+        var cheese = new Audio();
+        cheese.src = "/audio/cheese.mp3";
+        function PlayCheese() {
+            cheese.play();
+        }
+
+        var june = new Audio();
+        june.src = "/audio/june.mp3";
+        function PlayJune() {
+            june.play();
+        }
+
+        var car = new Audio();
+        car.src = "/audio/car.mp3";
+        function PlayCar() {
+            car.play();
+        }
+
+        var go = new Audio();
+        go.src = "/audio/go.mp3";
+        function PlayGo() {
+            go.play();
+        }
+
+        var fly = new Audio();
+        fly.src = "/audio/fly.mp3";
+        function PlayFly() {
+            fly.play();
+        }
+
+        var video = new Audio();
+        video.src = "/audio/video.mp3";
+        function PlayVideo() {
+            video.play();
+        }
+
+        var think = new Audio();
+        think.src = "/audio/think.mp3";
+        function PlayThink() {
+            think.play();
+        }
+
+        var thisaud = new Audio();
+        thisaud.src = "/audio/thisaud.mp3";
+        function PlayThisaud() {
+            thisaud.play();
+        }
+
+        var see = new Audio();
+        see.src = "/audio/see.mp3";
+        function PlaySee() {
+            see.play();
+        }
+
+        var zoo = new Audio();
+        zoo.src = "/audio/zoo.mp3";
+        function PlayZoo() {
+            zoo.play();
+        }
+
+        var shall = new Audio();
+        shall.src = "/audio/shall.mp3";
+        function PlayShall() {
+            shall.play();
+        }
+
+        var television = new Audio();
+        television.src = "/audio/television.mp3";
+        function PlayTelevision() {
+            television.play();
+        }
+
+        var man = new Audio();
+        man.src = "/audio/man.mp3";
+        function PlayMan() {
+            man.play();
+        }
+
+        var now = new Audio();
+        now.src = "/audio/now.mp3";
+        function PlayNow() {
+            now.play();
+        }
+
+        var sing = new Audio();
+        sing.src = "/audio/sing.mp3";
+        function PlaySing() {
+            sing.play();
+        }
+
+        var hat = new Audio();
+        hat.src = "/audio/hat.mp3";
+        function PlayHat() {
+            hat.play();
+        }
+
+        var love = new Audio();
+        love.src = "/audio/love.mp3";
+        function PlayLove() {
+            love.play();
+        }
+
+        var red = new Audio();
+        red.src = "/audio/red.mp3";
+        function PlayRed() {
+            red.play();
+        }
+
+        var wet = new Audio();
+        wet.src = "/audio/wet.mp3";
+        function PlayWet() {
+            wet.play();
+        }
+
+        var yes = new Audio();
+        yes.src = "/audio/yes.mp3";
+        function PlayYes() {
+            yes.play();
+        }
+    </script>
+    </section>
+
+
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact__container bd-grid">
+        <div class="contact__info">
+            <h3 class="contact__subtitle">EMAIL</h3>
+            <span class="contact__text">lengocgiau2k3@gmail.com</span>
+
+            <h3 class="contact__subtitle">PHONE</h3>
+            <span class="contact__text">+84 964-184-548</span>
+
+            <h3 class="contact__subtitle">ADRESS</h3>
+            <span class="contact__text">Ho Chi Minh city, Viet Nam</span>
+        </div>
+
+        <div class="contact__container bd-grid">
+          <form action="https://formspree.io/f/mzbqpajo" class="contact__form" method="POST">
+            <input type="text" placeholder="Name" class="contact__input" />
+            <input type="mail" placeholder="Email" class="contact__input" />
+            <textarea name="message" id="" cols="0" rows="10" class="contact__input"
+              placeholder="Tell something about you"></textarea>
+            <input type="submit" value="Send" class="contact__button button" />
+          </form>
+        </div>
+    </div>
+    </section>
+
+    <section>
+      
+    </section>
+
+    
+  </main>
+
+ 
+  <!--===== FOOTER =====-->
+  <footer class="footer">
+    <p class="footer__title">Lê Ngọc Giàu(Rich Lee)</p>
+    <div class="footer__social">
+      <a href="https://www.facebook.com/profile.php?id=100072621973373" class="footer__icon"><i class="bx bxl-facebook"></i></a>
+      <a href="https://www.instagram.com/giau7734/?igsh=MWhqZXppZ2Z6Ynh5Ng%3D%3D&fbclid=IwAR3nNIViDG1mPn_l4PS5qkq-_CZ0sEq_KgePhd-87Df8qFTfh9Kj6K-123g" class="footer__icon"><i class="bx bxl-instagram"></i></a>
+    </div>
+    <p class="footer__copy">&#169; le Ngoc Giau. All rigths reserved</p>
+     <!--==================== SCROLL TOP ====================-->
+
+    </footer>
+  <!--===== SCROLL REVEAL =====-->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!--===== MAIN JS =====-->
+  <script src="assets/js/main.js"></script>
+  <!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/mzbqpajo",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
