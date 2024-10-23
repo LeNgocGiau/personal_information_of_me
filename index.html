@@ -433,269 +433,325 @@
     </table>
 
     <script>
-        var sheep = new Audio();
-        sheep.src = "/audio/sheep.mp3";
-        function PlaySheep() {
-            sheep.play();
-        }
+      // Function to create an audio object with error handling
+      function createAudio(src) {
+        const audio = new Audio(src);
+        audio.addEventListener('error', function (e) {
+          console.error('Error occurred while loading audio:', e);
+        });
+        return audio;
+      }
 
-        var ship = new Audio();
-        ship.src = "/audio/ship.mp3";
-        function PlayShip() {
-            ship.play();
-        }
+      // Create audio objects for each sound
+      var sheep = createAudio("https://lengocgiau.github.io/Personal_Information/audio/sheep.mp3");
+      var ship = createAudio("https://lengocgiau.github.io/Personal_Information/audio/ship.mp3");
+      var good = createAudio("https://lengocgiau.github.io/Personal_Information/audio/good.mp3");
+      var shoot = createAudio("https://lengocgiau.github.io/Personal_Information/audio/shoot.mp3");
+      var bed = createAudio("https://lengocgiau.github.io/Personal_Information/audio/bed.mp3");
+      var teacher = createAudio("https://lengocgiau.github.io/Personal_Information/audio/teacher.mp3");
+      var bird = createAudio("https://lengocgiau.github.io/Personal_Information/audio/bird.mp3");
+      var door = createAudio("https://lengocgiau.github.io/Personal_Information/audio/door.mp3");
+      var cat = createAudio("https://lengocgiau.github.io/Personal_Information/audio/cat.mp3");
+      var up = createAudio("https://lengocgiau.github.io/Personal_Information/audio/up.mp3");
+      var far = createAudio("https://lengocgiau.github.io/Personal_Information/audio/far.mp3");
+      var on = createAudio("https://lengocgiau.github.io/Personal_Information/audio/on.mp3");
+      var here = createAudio("https://lengocgiau.github.io/Personal_Information/audio/here.mp3");
+      var wait = createAudio("https://lengocgiau.github.io/Personal_Information/audio/wait.mp3");
+      var tourist = createAudio("https://lengocgiau.github.io/Personal_Information/audio/tourist.mp3");
+      var boy = createAudio("https://lengocgiau.github.io/Personal_Information/audio/boy.mp3");
+      var show = createAudio("https://lengocgiau.github.io/Personal_Information/audio/show.mp3");
+      var hair = createAudio("https://lengocgiau.github.io/Personal_Information/audio/hair.mp3");
+      var my = createAudio("https://lengocgiau.github.io/Personal_Information/audio/my.mp3");
+      var cow = createAudio("https://lengocgiau.github.io/Personal_Information/audio/cow.mp3");
+      var pea = createAudio("https://lengocgiau.github.io/Personal_Information/audio/pea.mp3");
+      var boat = createAudio("https://lengocgiau.github.io/Personal_Information/audio/boat.mp3");
+      var tea = createAudio("https://lengocgiau.github.io/Personal_Information/audio/tea.mp3");
+      var dog = createAudio("https://lengocgiau.github.io/Personal_Information/audio/dog.mp3");
+      var cheese = createAudio("https://lengocgiau.github.io/Personal_Information/audio/cheese.mp3");
+      var june = createAudio("https://lengocgiau.github.io/Personal_Information/audio/june.mp3");
+      var car = createAudio("https://lengocgiau.github.io/Personal_Information/audio/car.mp3");
+      var go = createAudio("https://lengocgiau.github.io/Personal_Information/audio/go.mp3");
+      var fly = createAudio("https://lengocgiau.github.io/Personal_Information/audio/fly.mp3");
+      var video = createAudio("https://lengocgiau.github.io/Personal_Information/audio/video.mp3");
+      var think = createAudio("https://lengocgiau.github.io/Personal_Information/audio/think.mp3");
+      var thisaud = createAudio("https://lengocgiau.github.io/Personal_Information/audio/thisaud.mp3");
+      var see = createAudio("https://lengocgiau.github.io/Personal_Information/audio/see.mp3");
+      var zoo = createAudio("https://lengocgiau.github.io/Personal_Information/audio/zoo.mp3");
+      var shall = createAudio("https://lengocgiau.github.io/Personal_Information/audio/shall.mp3");
+      var television = createAudio("https://lengocgiau.github.io/Personal_Information/audio/television.mp3");
+      var man = createAudio("https://lengocgiau.github.io/Personal_Information/audio/man.mp3");
+      var now = createAudio("https://lengocgiau.github.io/Personal_Information/audio/now.mp3");
+      var sing = createAudio("https://lengocgiau.github.io/Personal_Information/audio/sing.mp3");
+      var hat = createAudio("https://lengocgiau.github.io/Personal_Information/audio/hat.mp3");
+      var love = createAudio("https://lengocgiau.github.io/Personal_Information/audio/love.mp3");
+      var red = createAudio("https://lengocgiau.github.io/Personal_Information/audio/red.mp3");
+      var wet = createAudio("https://lengocgiau.github.io/Personal_Information/audio/wet.mp3");
+      var yes = createAudio("https://lengocgiau.github.io/Personal_Information/audio/yes.mp3");
 
-        var good = new Audio();
-        good.src = "/audio/good.mp3";
-        function PlayGood() {
-            good.play();
-        }
+      // Functions to play each sound
+      function PlaySheep() {
+        sheep.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var shoot = new Audio();
-        shoot.src = "/audio/shoot.mp3";
-        function PlayShoot() {
-            shoot.play();
-        }
+      function PlayShip() {
+        ship.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var bed = new Audio();
-        bed.src = "/audio/bed.mp3";
-        function PlayBed() {
-            bed.play();
-        }
+      function PlayGood() {
+        good.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var teacher = new Audio();
-        teacher.src = "/audio/teacher.mp3";
-        function PlayTeacher() {
-            teacher.play();
-        }
+      function PlayShoot() {
+        shoot.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var bird = new Audio();
-        bird.src = "/audio/bird.mp3";
-        function PlayBird() {
-            bird.play();
-        }
+      function PlayBed() {
+        bed.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var door = new Audio();
-        door.src = "/audio/door.mp3";
-        function PlayDoor() {
-            door.play();
-        }
+      function PlayTeacher() {
+        teacher.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var cat = new Audio();
-        cat.src = "/audio/cat.mp3";
-        function PlayCat() {
-            cat.play();
-        }
+      function PlayBird() {
+        bird.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var up = new Audio();
-        up.src = "/audio/up.mp3";
-        function PlayUp() {
-            up.play();
-        }
+      function PlayDoor() {
+        door.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var far = new Audio();
-        far.src = "/audio/far.mp3";
-        function PlayFar() {
-            far.play();
-        }
+      function PlayCat() {
+        cat.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var on = new Audio();
-        on.src = "/audio/on.mp3";
-        function PlayOn() {
-            on.play();
-        }
+      function PlayUp() {
+        up.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var here = new Audio();
-        here.src = "/audio/here.mp3";
-        function PlayHere() {
-            here.play();
-        }
+      function PlayFar() {
+        far.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var wait = new Audio();
-        wait.src = "/audio/wait.mp3";
-        function PlayWait() {
-            wait.play();
-        }
+      function PlayOn() {
+        on.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var tourist = new Audio();
-        tourist.src = "/audio/tourist.mp3";
-        function PlayTourist() {
-            tourist.play();
-        }
+      function PlayHere() {
+        here.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var boy = new Audio();
-        boy.src = "/audio/boy.mp3";
-        function PlayBoy() {
-            boy.play();
-        }
+      function PlayWait() {
+        wait.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var show = new Audio();
-        show.src = "/audio/show.mp3";
-        function PlayShow() {
-            show.play();
-        }
+      function PlayTourist() {
+        tourist.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var hair = new Audio();
-        hair.src = "/audio/hair.mp3";
-        function PlayHair() {
-            hair.play();
-        }
+      function PlayBoy() {
+        boy.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var my = new Audio();
-        my.src = "/audio/my.mp3";
-        function PlayMy() {
-            my.play();
-        }
+      function PlayShow() {
+        show.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var cow = new Audio();
-        cow.src = "/audio/cow.mp3";
-        function PlayCow() {
-            cow.play();
-        }
+      function PlayHair() {
+        hair.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var pea = new Audio();
-        pea.src = "/audio/pea.mp3";
-        function PlayPea() {
-            pea.play();
-        }
+      function PlayMy() {
+        my.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var boat = new Audio();
-        boat.src = "/audio/boat.mp3";
-        function PlayBoat() {
-            boat.play();
-        }
+      function PlayCow() {
+        cow.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var tea = new Audio();
-        tea.src = "/audio/tea.mp3";
-        function PlayTea() {
-            tea.play();
-        }
+      function PlayPea() {
+        pea.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var dog = new Audio();
-        dog.src = "/audio/dog.mp3";
-        function PlayDog() {
-            dog.play();
-        }
+      function PlayBoat() {
+        boat.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var cheese = new Audio();
-        cheese.src = "/audio/cheese.mp3";
-        function PlayCheese() {
-            cheese.play();
-        }
+      function PlayTea() {
+        tea.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var june = new Audio();
-        june.src = "/audio/june.mp3";
-        function PlayJune() {
-            june.play();
-        }
+      function PlayDog() {
+        dog.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var car = new Audio();
-        car.src = "/audio/car.mp3";
-        function PlayCar() {
-            car.play();
-        }
+      function PlayCheese() {
+        cheese.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var go = new Audio();
-        go.src = "/audio/go.mp3";
-        function PlayGo() {
-            go.play();
-        }
+      function PlayJune() {
+        june.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var fly = new Audio();
-        fly.src = "/audio/fly.mp3";
-        function PlayFly() {
-            fly.play();
-        }
+      function PlayCar() {
+        car.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var video = new Audio();
-        video.src = "/audio/video.mp3";
-        function PlayVideo() {
-            video.play();
-        }
+      function PlayGo() {
+        go.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var think = new Audio();
-        think.src = "/audio/think.mp3";
-        function PlayThink() {
-            think.play();
-        }
+      function PlayFly() {
+        fly.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var thisaud = new Audio();
-        thisaud.src = "/audio/thisaud.mp3";
-        function PlayThisaud() {
-            thisaud.play();
-        }
+      function PlayVideo() {
+        video.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var see = new Audio();
-        see.src = "/audio/see.mp3";
-        function PlaySee() {
-            see.play();
-        }
+      function PlayThink() {
+        think.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var zoo = new Audio();
-        zoo.src = "/audio/zoo.mp3";
-        function PlayZoo() {
-            zoo.play();
-        }
+      function PlayThisaud() {
+        thisaud.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var shall = new Audio();
-        shall.src = "/audio/shall.mp3";
-        function PlayShall() {
-            shall.play();
-        }
+      function PlaySee() {
+        see.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var television = new Audio();
-        television.src = "/audio/television.mp3";
-        function PlayTelevision() {
-            television.play();
-        }
+      function PlayZoo() {
+        zoo.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var man = new Audio();
-        man.src = "/audio/man.mp3";
-        function PlayMan() {
-            man.play();
-        }
+      function PlayShall() {
+        shall.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var now = new Audio();
-        now.src = "/audio/now.mp3";
-        function PlayNow() {
-            now.play();
-        }
+      function PlayTelevision() {
+        television.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var sing = new Audio();
-        sing.src = "/audio/sing.mp3";
-        function PlaySing() {
-            sing.play();
-        }
+      function PlayMan() {
+        man.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var hat = new Audio();
-        hat.src = "/audio/hat.mp3";
-        function PlayHat() {
-            hat.play();
-        }
+      function PlayNow() {
+        now.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var love = new Audio();
-        love.src = "/audio/love.mp3";
-        function PlayLove() {
-            love.play();
-        }
+      function PlaySing() {
+        sing.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var red = new Audio();
-        red.src = "/audio/red.mp3";
-        function PlayRed() {
-            red.play();
-        }
+      function PlayHat() {
+        hat.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var wet = new Audio();
-        wet.src = "/audio/wet.mp3";
-        function PlayWet() {
-            wet.play();
-        }
+      function PlayLove() {
+        love.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
 
-        var yes = new Audio();
-        yes.src = "/audio/yes.mp3";
-        function PlayYes() {
-            yes.play();
-        }
+      function PlayRed() {
+        red.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
+
+      function PlayWet() {
+        wet.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
+
+      function PlayYes() {
+        yes.play().catch(function (error) {
+          console.error('Playback failed:', error);
+        });
+      }
     </script>
     </section>
 
